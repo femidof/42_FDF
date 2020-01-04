@@ -1,0 +1,1 @@
+gcc -I /nfs/2019/o/oldurosi/rep-oldurosi/42/FdF/minilibx fdf.c -L /nfs/2019/o/oldurosi/rep-oldurosi/42/FdF/minilibx  -lmlx -framework OpenGL -framework Appkit -o fdf
