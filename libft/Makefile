@@ -43,7 +43,7 @@ SRCS	= ft_memset.c ft_bzero.c	\
 		  ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c	\
 		  ft_lstfold.c ft_nbrlen.c ft_wordcount.c \
 		  ft_wordlen.c ft_iswspace.c ft_isspace.c \
-		  get_next_line.c
+		  get_next_line.c ft_program_name.c
 
 OBJS	= $(SRCS:.c=.o)
 

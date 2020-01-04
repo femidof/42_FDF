@@ -109,5 +109,6 @@ size_t				ft_wordlen(const char *s, char c);
 size_t				ft_wordcount(const char *s, char c);
 int					ft_iswspace(int c);
 int					t_isspace(int c);
+char*				ft_program_name(char const *argv0);
 
 #endif
