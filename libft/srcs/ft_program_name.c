@@ -12,11 +12,11 @@
 
 #include "./../includes/libft.h"
 
-char *ft_program_name(char const *argv0)
+char    *ft_program_name(char const *argv0)
 {
     char *name;
 
-    name  = (char *)argv0;
+    name = (char *)argv0;
     while (*name && *name != '/')
     {
         name++;
