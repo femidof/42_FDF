@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_program_name.c                                  :+:      :+:    :+:   */
+/*   ft_puterror.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oldurosi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/03 20:26:57 by oldurosi          #+#    #+#             */
-/*   Updated: 2020/01/09 17:46:43 by oldurosi         ###   ########.fr       */
+/*   Created: 2020/01/09 17:47:21 by oldurosi          #+#    #+#             */
+/*   Updated: 2020/01/09 17:47:47 by oldurosi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/libft.h"
 
-char	*ft_program_name(char const *argv0)
+void	ft_puterror(char *msg, int ret)
 {
-	char *name;
-
-	name = (char *)argv0;
-	while (*name && *name != '/')
-	{
-		name++;
-	}
-	if (!name)
-		return ((char *)argv0);
-	return (name + 1);
+	ft_putendl(msg);
+	exit(ret);
 }

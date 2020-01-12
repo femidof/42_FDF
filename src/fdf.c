@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fdf.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oldurosi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/09 18:15:51 by oldurosi          #+#    #+#             */
+/*   Updated: 2020/01/09 18:15:56 by oldurosi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/fdf.h"
 /*
 **  Shows how to run and use fdf
@@ -11,20 +23,21 @@ void usage(char *argv0)
 	ft_putstr("Controls:\n");
 	ft_putstr("\t[Esc]        -> Exit the program.\n");
 	ft_putstr("\t[R]          -> Reset the map.\n");
-	ft_putstr("\t[C]          -> Color the map!.\n");
-	ft_putstr("\t[Z][X]       -> Zoom in and zoom out.\n");
-	ft_putstr("\t[J][K]       -> Spiky time!\n");
-	ft_putstr("\t[Space]      -> Change the camera (isometric <-> plain).\n");
-	ft_putstr("\t[W][A][S][D] -> Move the map.\n");
+	ft_putstr("\t[E]          -> Color the map!.\n");
+	ft_putstr("\t[Q][A]       -> Zoom in and zoom out.\n");
+	ft_putstr("\t[W][S]       -> Altitude \n");
+	ft_putstr("\t[C]          -> Change the camera (isometric <-> plain).\n");
+	ft_putstr("\t[⬆][⬇][⬅][➡️] -> Move the map.\n");
 }
 
 int main(int argc, char **argv)
 {
-    void **map;
+    // void **map;
+    t_fdf *fdf;
 
     if (argc == 2)
     {
-        /* code */
+        read_lines(argv[1], fdf);
     }
     else
     {

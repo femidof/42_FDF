@@ -6,7 +6,7 @@
 /*   By: oldurosi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 18:01:37 by oldurosi          #+#    #+#             */
-/*   Updated: 2019/10/15 22:26:50 by oldurosi         ###   ########.fr       */
+/*   Updated: 2020/01/09 17:52:36 by oldurosi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <string.h>
+# include <stdlib.h>
 
 typedef struct		s_list
 {
@@ -110,5 +111,7 @@ size_t				ft_wordcount(const char *s, char c);
 int					ft_iswspace(int c);
 int					t_isspace(int c);
 char*				ft_program_name(char const *argv0);
+char				*ft_remove_extension(char *filename);
+void				ft_puterror(char *msg, int ret);
 
 #endif
