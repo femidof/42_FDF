@@ -12,10 +12,27 @@
 
 #include "./../includes/fdf.h"
 
-int line_count(char *argv, t_fdf fdf)
+int count_values(char *line)
+{
+    int num_value;
+
+    num_value = 0;
+    // while (*line)
+    // {
+    //     printf("Here i have my line output: %s\n", line);
+    //     // i need to use strsplit and atoi to get the values and count with that
+
+    //     // and within  the 
+    //     line++;
+    // }
+    return (num_value);
+}
+
+int line_count(char *argv, t_fdf *fdf)
 {
     int rows;
     int cols;
+    int len;
     int fd;
     char *line;
 
@@ -28,9 +45,12 @@ int line_count(char *argv, t_fdf fdf)
     cols = 0;
     while (get_next_line(fd, &line) == 1)
     {
-        /* code */
+        if (((len = count_values(line)) > cols) && (cols == 0))
+            cols = len;
+        (cols == len) ? rows += 1 : ft_puterror("Not a valid file!", 4);
+        free(line);
     }
-    
+    return (rows);
 }
 
 void validate_lines(char *line, t_fdf *fdf)
@@ -77,6 +97,6 @@ void read_lines(char *argv, t_fdf *fdf)
     if (!(fdf = (t_fdf *)malloc(sizeof(t_fdf))))
 			ft_puterror("Memory Allocation failed!", 3);
     fdf_read(argv, fdf);
-    nomalize_map(fdf);
+    // nomalize_map(fdf);
 
 }
