@@ -20,13 +20,16 @@ int count_values(char *line)
     num_value = 0;
     splitted_value = ft_strsplit(line, ' ');
     while (*splitted_value)
-    // {
-    //     printf("Here i have my line output: %s\n", line);
+    {
+
+        printf("Here i have my line output: %s\n", line);
     //     // i need to use strsplit and atoi to get the values and count with that
 
     //     // and within  the 
-    //     line++;
-    // }
+        num_value++;
+        splitted_value++;
+    }
+    printf("this is my column number here - %d", num_value);
     return (num_value);
 }
 
