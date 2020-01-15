@@ -15,9 +15,11 @@
 int count_values(char *line)
 {
     int num_value;
+    char **splitted_value;
 
     num_value = 0;
-    // while (*line)
+    splitted_value = ft_strsplit(line, ' ');
+    while (*splitted_value)
     // {
     //     printf("Here i have my line output: %s\n", line);
     //     // i need to use strsplit and atoi to get the values and count with that
