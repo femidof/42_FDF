@@ -15,11 +15,14 @@
 #include "../libft/includes/get_next_line.h"
 #include "../libft/includes/libft.h"
 #include "../minilibx/mlx.h"
+#include "keys.h"
+#include <math.h>
 
 # define P_WIDTH  1920 //1280 540.85
 # define P_HEIGHT 1080 //720  304.22
-# define XY_ZOOM 0.005
-# define Z_ZOOM 0.005
+# define ALTI_ZOOM 10
+# define MAX_ZOOM 5
+# define MAGNIFY 2
 
 typedef struct	s_mlx
 {
@@ -46,7 +49,7 @@ typedef struct	s_map
 	int		x1;
 	int		y0;
 	int		y1;
-	int		zoom;
+	int		scalin;
 	int		isometric;
 	double	z_value;
 	double	angle_x;
@@ -54,9 +57,9 @@ typedef struct	s_map
 }				t_map;
 typedef struct	s_color
 {
-	int		red;
-	int		green;
-	int		blue;
+	int		R;
+	int		G;
+	int		B;
 }				t_color;
 
 typedef struct	s_fdf
@@ -68,5 +71,6 @@ typedef struct	s_fdf
 }				t_fdf;
 
 void read_lines(char *argv, t_fdf *fdf);
-
+int fdf_draw(t_fdf *fdf);
+static void nomalize_map(t_fdf *fdf);
 #endif
