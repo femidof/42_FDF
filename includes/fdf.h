@@ -11,15 +11,16 @@
 /* ************************************************************************** */
 
 #ifndef FDF_H
-#define FDF_H
+# define FDF_H
+
 #include "../libft/includes/get_next_line.h"
 #include "../libft/includes/libft.h"
 #include "../minilibx/mlx.h"
-#include "keys.h"
+#include "./keys.h"
 #include <math.h>
 
-# define P_WIDTH  1920 //1280 540.85
-# define P_HEIGHT 1080 //720  304.22
+# define P_WIDTH  1920
+# define P_HEIGHT 1080
 # define ALTI_ZOOM 10
 # define MAX_ZOOM 5
 # define MAGNIFY 2
@@ -70,7 +71,7 @@ typedef struct	s_fdf
 	t_color	color;
 }				t_fdf;
 
-void read_lines(char *argv, t_fdf *fdf);
+void read_lines(char *argv0, t_fdf *fdf);
 int fdf_draw(t_fdf *fdf);
-static void nomalize_map(t_fdf *fdf);
+
 #endif

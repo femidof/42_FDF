@@ -6,7 +6,7 @@
 #    By: oldurosi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/03 19:29:45 by oldurosi          #+#    #+#              #
-#    Updated: 2020/01/03 20:20:47 by oldurosi         ###   ########.fr        #
+#    Updated: 2020/01/17 12:08:42 by oldurosi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME = fdf
 
 # Compilation flags
-FLAGS = -Wall -Wextra -Werror 
+FLAGS = -Wall -Wextra -Werror -g 
 
 # DIR
 SRC_DIR = ./src/
@@ -24,7 +24,7 @@ LIBFT_DIR = ./libft/
 MINILIBX_DIR = ./minilibx/
 
 # Source Files & Object Files
-SRC_FILES = fdf.c
+SRC_FILES = fdf.c ft_read.c fdf_drawing.c
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
 # PATHS
