@@ -1,7 +1,0 @@
-gcc -I /nfs/2019/o/oldurosi/rep-oldurosi/42/FdF/minilibx fdf.c -L /nfs/2019/o/oldurosi/rep-oldurosi/42/FdF/minilibx  -lmlx -framework OpenGL -framework Appkit -o fdf
-
-
-
-gcc -I /nfs/2019/o/oldurosi/rep-oldurosi/42/FdF/minilibx src/fdf.c src/ft_read.c -L /nfs/2019/o/oldurosi/rep-oldurosi/42/FdF/libft -lft -L /nfs/2019/o/oldurosi/rep-oldurosi/42/FdF/minilibx  -lmlx -framework OpenGL -framework Appkit -o fdf
-
-gcc -I /nfs/2019/o/oldurosi/rep-oldurosi/42/FdF/minilibx src/fdf.c src/ft_read.c src/fdf_drawing.c -L /nfs/2019/o/oldurosi/rep-oldurosi/42/FdF/libft -lft -L /nfs/2019/o/oldurosi/rep-oldurosi/42/FdF/minilibx  -lmlx -framework OpenGL -framework Appkit -o fdf
