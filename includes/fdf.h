@@ -6,18 +6,18 @@
 /*   By: oldurosi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/03 21:08:53 by oldurosi          #+#    #+#             */
-/*   Updated: 2020/01/03 21:08:54 by oldurosi         ###   ########.fr       */
+/*   Updated: 2020/01/17 15:26:38 by oldurosi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
 # define FDF_H
 
-#include "../libft/includes/get_next_line.h"
-#include "../libft/includes/libft.h"
-#include "../minilibx/mlx.h"
-#include "./keys.h"
-#include <math.h>
+# include "../libft/includes/get_next_line.h"
+# include "../libft/includes/libft.h"
+# include "../minilibx/mlx.h"
+# include "./keys.h"
+# include <math.h>
 
 # define P_WIDTH  1920
 # define P_HEIGHT 1080
@@ -58,9 +58,9 @@ typedef struct	s_map
 }				t_map;
 typedef struct	s_color
 {
-	int		R;
-	int		G;
-	int		B;
+	int		r;
+	int		g;
+	int		b;
 }				t_color;
 
 typedef struct	s_fdf
@@ -71,7 +71,7 @@ typedef struct	s_fdf
 	t_color	color;
 }				t_fdf;
 
-void read_lines(char *argv0, t_fdf *fdf);
-int fdf_draw(t_fdf *fdf);
+void	read_lines(char *argv0, t_fdf *fdf);
+int		fdf_draw(t_fdf *fdf);
 
 #endif

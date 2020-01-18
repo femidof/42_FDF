@@ -6,7 +6,7 @@
 /*   By: oldurosi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 18:15:51 by oldurosi          #+#    #+#             */
-/*   Updated: 2020/01/16 20:18:59 by oldurosi         ###   ########.fr       */
+/*   Updated: 2020/01/17 16:33:07 by oldurosi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 **  Shows how to run and use fdf
 */
 
-void usage(char *argv0)
+void	usage(char *argv0)
 {
 	ft_putstr("\033[0;31mError:\033[0mInvalid file input \n");
 	ft_putstr("\033[01;33mUsage:\n\t\033[0m");
@@ -32,7 +32,7 @@ void usage(char *argv0)
 	ft_putstr("\t[⬆️][⬇️][⬅️][➡️] -> Move the map.\n");
 }
 
-int main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	t_fdf *fdf;
 
