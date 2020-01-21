@@ -6,33 +6,33 @@
 /*   By: oldurosi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 20:19:09 by oldurosi          #+#    #+#             */
-/*   Updated: 2020/01/16 20:25:17 by oldurosi         ###   ########.fr       */
+/*   Updated: 2020/01/20 14:48:01 by oldurosi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/fdf.h"
 
-static void draw(t_fdf *fdf, int x, int y, double dchang)
+static void	draw(t_fdf *fdf, int x, int y, double dchang)
 {
-	int point;
+	int		point;
 
 	if ((x > 0 && y > 0) && (x < P_WIDTH && y < P_HEIGHT))
 	{
 		point = (x * 4) + (y * P_WIDTH * 4);
-		fdf->image.data[point] = fdf->color.R + dchang;
-		fdf->image.data[point + 1] = fdf->color.G + dchang;
-		fdf->image.data[point + 2] = fdf->color.B + dchang;
+		fdf->image.data[point] = fdf->color.r + dchang;
+		fdf->image.data[point + 1] = fdf->color.g + dchang;
+		fdf->image.data[point + 2] = fdf->color.b + dchang;
 		fdf->image.data[point + 3] = 0x4f + dchang;
 	}
 }
 
-static void draw_pix(t_fdf *fdf)
+static void	draw_pix(t_fdf *fdf)
 {
-	double x;
-	double y;
-	double dx;
-	double dy;
-	double dchang;
+	double	x;
+	double	y;
+	double	dx;
+	double	dy;
+	double	dchang;
 
 	x = fdf->map.x0;
 	y = fdf->map.y0;
@@ -50,10 +50,10 @@ static void draw_pix(t_fdf *fdf)
 	}
 }
 
-static void draw_to_xaxis(t_fdf *fdf, int x, int  y)
+static void	draw_to_xaxis(t_fdf *fdf, int x, int y)
 {
-	int dx;
-	int dy;
+	int		dx;
+	int		dy;
 
 	dx = x - fdf->map.length / 2;
 	dy = y - fdf->map.breadth / 2;
@@ -70,10 +70,10 @@ static void draw_to_xaxis(t_fdf *fdf, int x, int  y)
 	draw_pix(fdf);
 }
 
-static void draw_to_yaxis(t_fdf *fdf, int x, int  y)
+static void	draw_to_yaxis(t_fdf *fdf, int x, int y)
 {
-	int dx;
-	int dy;
+	int		dx;
+	int		dy;
 
 	dx = x - fdf->map.length / 2;
 	dy = y - fdf->map.breadth / 2;
@@ -90,10 +90,10 @@ static void draw_to_yaxis(t_fdf *fdf, int x, int  y)
 	draw_pix(fdf);
 }
 
-int fdf_draw(t_fdf *fdf)
+int			fdf_draw(t_fdf *fdf)
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 
 	y = 0;
 	fdf->mlx.img = mlx_new_image(fdf->mlx.init, P_WIDTH, P_HEIGHT);
@@ -114,7 +114,7 @@ int fdf_draw(t_fdf *fdf)
 		}
 		y++;
 	}
-	mlx_put_image_to_window(fdf->mlx.init, fdf->mlx.win, fdf->mlx.img, 0, 0);
+	drawing_to_display(fdf);
 	mlx_destroy_image(fdf->mlx.init, fdf->mlx.img);
 	return (0);
 }

@@ -14,7 +14,7 @@
 NAME = fdf
 
 # Compilation flags
-FLAGS = -Wall -Wextra -Werror -g 
+FLAGS = -Wall -Wextra -Werror -g
 
 # DIR
 SRC_DIR = ./src/
@@ -24,7 +24,7 @@ LIBFT_DIR = ./libft/
 MINILIBX_DIR = ./minilibx/
 
 # Source Files & Object Files
-SRC_FILES = fdf.c ft_read.c fdf_drawing.c
+SRC_FILES = fdf.c ft_read.c fdf_drawing.c fdf_xtra.c
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
 # PATHS

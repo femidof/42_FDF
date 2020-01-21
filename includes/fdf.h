@@ -6,7 +6,7 @@
 /*   By: oldurosi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/03 21:08:53 by oldurosi          #+#    #+#             */
-/*   Updated: 2020/01/17 15:26:38 by oldurosi         ###   ########.fr       */
+/*   Updated: 2020/01/20 15:36:43 by oldurosi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,13 @@
 # include "../minilibx/mlx.h"
 # include "./keys.h"
 # include <math.h>
-
 # define P_WIDTH  1920
 # define P_HEIGHT 1080
 # define ALTI_ZOOM 10
 # define MAX_ZOOM 5
 # define MAGNIFY 2
 
-typedef struct	s_mlx
+typedef	struct	s_mlx
 {
 	void	*init;
 	void	*win;
@@ -39,7 +38,8 @@ typedef struct	s_image
 	int		endian;
 	int		bpp;
 }				t_image;
-typedef struct	s_map
+
+typedef	struct	s_map
 {
 	int		**values;
 	int		length;
@@ -56,6 +56,7 @@ typedef struct	s_map
 	double	angle_x;
 	double	angle_y;
 }				t_map;
+
 typedef struct	s_color
 {
 	int		r;
@@ -71,7 +72,15 @@ typedef struct	s_fdf
 	t_color	color;
 }				t_fdf;
 
-void	read_lines(char *argv0, t_fdf *fdf);
-int		fdf_draw(t_fdf *fdf);
+void			read_lines(char *argv0, t_fdf *fdf);
+int				fdf_draw(t_fdf *fdf);
+void			nomalize_map(t_fdf *fdf);
+void			get_values(t_fdf *fdf, int x, int y, char *line);
+void			validate_lines(char *line);
+int				count_values(char *line);
+void			mix_color(t_fdf *fdf);
+void			print_string(t_fdf *fdf);
+void			drawing_to_display(t_fdf *fdf);
+int				line_count(char *argv, t_fdf *fdf);
 
 #endif
