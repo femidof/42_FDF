@@ -6,13 +6,13 @@
 /*   By: oldurosi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 18:15:51 by oldurosi          #+#    #+#             */
-/*   Updated: 2020/01/17 16:33:07 by oldurosi         ###   ########.fr       */
+/*   Updated: 2020/01/21 00:02:27 by oldurosi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 
-int	fdf_keys(int keycode, t_fdf *fdf)
+int			fdf_keys(int keycode, t_fdf *fdf)
 {
 	if (keycode == KEY_ESCAPE)
 		exit(0);
@@ -94,7 +94,7 @@ void		read_lines(char *argv0, t_fdf *fdf)
 **  Shows how to run and use fdf
 */
 
-void	usage(char *argv0)
+void		usage(char *argv0)
 {
 	ft_putstr("\033[0;31mError:\033[0mInvalid file input \n");
 	ft_putstr("\033[01;33mUsage:\n\t\033[0m");
@@ -110,9 +110,9 @@ void	usage(char *argv0)
 	ft_putstr("\t[⬆️][⬇️][⬅️][➡️] -> Move the map.\n");
 }
 
-int		main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
-	t_fdf *fdf;
+	t_fdf	*fdf;
 
 	fdf = NULL;
 	if (argc == 2)

@@ -6,7 +6,7 @@
 /*   By: oldurosi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 15:04:05 by oldurosi          #+#    #+#             */
-/*   Updated: 2020/01/20 15:32:58 by oldurosi         ###   ########.fr       */
+/*   Updated: 2020/01/20 23:55:45 by oldurosi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 void		print_string(t_fdf *fdf)
 {
-	mlx_string_put(fdf->mlx.init,fdf->mlx.win,20, 20, 0xffe43f, "Controls: ");
-	mlx_string_put(fdf->mlx.init,fdf->mlx.win,20, 35, 0xffe43f, "[Esc]        -> Exit the program.");
-	mlx_string_put(fdf->mlx.init,fdf->mlx.win,20, 50, 0xffe43f, "[E]          -> Color the map!.");
-	mlx_string_put(fdf->mlx.init,fdf->mlx.win,20, 65, 0xffe43f, "[Q][A]       -> Zoom in and zoom out.");
-	mlx_string_put(fdf->mlx.init,fdf->mlx.win,20, 80, 0xffe43f, "[W][S]       -> Altitude ");
-	mlx_string_put(fdf->mlx.init,fdf->mlx.win,20, 95, 0xffe43f, "[C]          -> Change the camera (isometric <-> plain).");
-	mlx_string_put(fdf->mlx.init,fdf->mlx.win,20, 110, 0xffe43f, "[^][v][<][➡>] -> Move the map.");
+	mlx_string_put(fdf->mlx.init, fdf->mlx.win, 20, 20, 0xffe43f, "Controls: ");
+	mlx_string_put(fdf->mlx.init, fdf->mlx.win, 20, 35, 0xffe43f, "[Esc]\
+			----                  -> Exit the program.");
+	mlx_string_put(fdf->mlx.init, fdf->mlx.win, 20, 50, 0xffe43f, "[E]\
+			----                  -> Color the map!.");
+	mlx_string_put(fdf->mlx.init, fdf->mlx.win, 20, 65, 0xffe43f, "[Q][A]\
+			----                  -> Zoom in and zoom out.");
+	mlx_string_put(fdf->mlx.init, fdf->mlx.win, 20, 80, 0xffe43f, "[W][S]\
+			----                  -> Altitude ");
+	mlx_string_put(fdf->mlx.init, fdf->mlx.win, 20, 95, 0xffe43f, "[C]\
+			----                  -> Change the camera (isometric <-> plain).");
+	mlx_string_put(fdf->mlx.init, fdf->mlx.win, 20, 110, 0xffe43f, "[^][v][<]\
+			[➡>]                  -> Move the map.");
 }
 
 void		validate_lines(char *line)
@@ -31,7 +37,7 @@ void		validate_lines(char *line)
 		{
 			if (ft_strstr(line, ",0x"))
 			{
-				break;
+				break ;
 			}
 		}
 		else if (*line != ' ' && *line != '-')
@@ -40,10 +46,10 @@ void		validate_lines(char *line)
 	}
 }
 
-int				count_values(char *line)
+int			count_values(char *line)
 {
-	int			num_value;
-	char		**splitted_value;
+	int		num_value;
+	char	**splitted_value;
 
 	num_value = 0;
 	splitted_value = ft_strsplit(line, ' ');
@@ -55,7 +61,7 @@ int				count_values(char *line)
 	return (num_value);
 }
 
-void drawing_to_display(t_fdf *fdf)
+void		drawing_to_display(t_fdf *fdf)
 {
 	mlx_put_image_to_window(fdf->mlx.init, fdf->mlx.win, fdf->mlx.img, 0, 0);
 	print_string(fdf);
