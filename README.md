@@ -40,4 +40,5 @@ Try running the following:
 
 
 ## Screenshots
-
+![](http://g.recordit.co/dWUb5yJkh3.gif)
+![](http://g.recordit.co/xu7uiMhEhi.gif)
